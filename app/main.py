@@ -31,7 +31,11 @@ def parse_url(v):
 
 @app.get("/",response_class=HTMLResponse)
 async def home(request:Request):
-    return templates.TemplateResponse("dashboard.html",{"request":request,"instance":INSTANCE})
+  return templates.TemplateResponse(
+    request=request,
+    name="dashboard.html",
+    context={"instance": INSTANCE}
+)
 
 @app.post("/api/analyze")
 async def analyze(payload:dict):
