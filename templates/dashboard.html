@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>YouTube Public Analyzer</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<main>
+  <section class="hero">
+    <h1>YouTube Public Analyzer</h1>
+    <p>Paste a public YouTube channel or video URL.</p>
+    <form id="form">
+      <input id="url" type="url" placeholder="https://www.youtube.com/@channel or https://youtu.be/..." required>
+      <button>Analyze</button>
+    </form>
+    <small>Uses public YouTube Data API information. No private creator analytics are accessed.</small>
+  </section>
+  <div id="status"></div>
+  <section id="results"></section>
+</main>
+<script src="/static/app.js"></script>
+</body>
+</html>
